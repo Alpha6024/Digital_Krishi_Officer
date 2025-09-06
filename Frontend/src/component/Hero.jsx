@@ -5,7 +5,7 @@ export default function Hero() {
 
   return (
     <div className="relative h-screen w-screen overflow-hidden">
-      {/* Background Video */}
+     
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         src="/image.mp4"
@@ -13,11 +13,7 @@ export default function Hero() {
         loop
         muted
       ></video>
-
-      {/* Overlay for readability */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
-
-      {/* Foreground Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
         <h1 className="text-5xl md:text-7xl font-bold drop-shadow-lg">
           Digital Krishi Officer
