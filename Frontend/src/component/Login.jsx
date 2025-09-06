@@ -2,14 +2,13 @@ import { motion } from "framer-motion";
 import Header from "./Header";
 import RiveCircle from "./rivecircle";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ import navigate
+import { useNavigate } from "react-router-dom"; 
 
 export default function Login() {
   const [move, setMove] = useState(false);
-  const navigate = useNavigate(); // ✅ create navigate function
+  const navigate = useNavigate();
 
   const handleLogin = () => {
-    // You can add validation here if needed before navigating
     navigate("/main");
   };
 
@@ -17,7 +16,7 @@ export default function Login() {
     <>
       <Header />
       <div className="min-h-[92vh] w-screen bg-blue-300 flex flex-col md:flex-row justify-center items-center gap-6 p-4 relative overflow-hidden">
-        {/* LEFT CARD */}
+       
         <motion.div
           animate={{ x: move ? 460 : 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
@@ -37,7 +36,7 @@ export default function Login() {
           </div>
         </motion.div>
 
-        {/* RIGHT CARD */}
+       
         <motion.div
           animate={{ x: move ? -460 : 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
